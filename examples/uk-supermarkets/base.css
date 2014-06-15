@@ -9,12 +9,6 @@ p {
   margin-bottom: 10px;
 }
 
-.point-arcs {
-  display: none;
-  fill: none;
-  stroke: #000;
-}
-
 .point-cell {
   fill: none;
   pointer-events: all;
