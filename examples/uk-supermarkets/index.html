@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link href="/voronoi-maps/examples/uk-supermarkets/base.css" rel="stylesheet" />
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -31,11 +31,12 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js"></script>
+  <script src="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js"></script>
   <script src="/voronoi-maps/lib/voronoi_map.js"></script>
   <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoiemV0dGVyIiwiYSI6ImVvQ3FGVlEifQ.jGp_PWb6xineYqezpSd7wA';
-    map = L.mapbox.map('map', 'zetter.i73ka9hn')
+    map = L.mapbox.map('map')
+      .addLayer(L.mapbox.styleLayer('mapbox://styles/zetter/ckudv86zx659017mw9km17j4u'))
       .fitBounds([[59.355596 , -9.052734], [49.894634 , 3.515625]]);
 
     url = '/voronoi-maps/examples/uk-supermarkets/supermarkets.csv';
